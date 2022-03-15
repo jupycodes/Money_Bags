@@ -2,6 +2,8 @@
 [![Express | CI](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/express.js.yml/badge.svg)](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/express.js.yml)
 # Money_Bags
 
+This is a sample application being built as an excersice with students from the [RoboGarden Full Stack Development Bootcamp](https://bootcamps.robogarden.ca/bootcamp/full-stack)
+
 ## Testing with vagrant
 
 These steps assume you have completed the [First time vagrant setup](#first-time-vagrant-setup):
