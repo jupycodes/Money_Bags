@@ -1,6 +1,6 @@
 [![Angular | CI](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/angular.js.yml/badge.svg?branch=main)](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/angular.js.yml)
 [![Express | CI](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/express.js.yml/badge.svg)](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/express.js.yml)
-[![Discord](https://discordapp.com/api/guilds/937863219194789908/embed.png)]()
+[![Discord](https://discordapp.com/api/guilds/937863219194789908/embed.png)](#)
 
 # Money_Bags
 
