@@ -46,7 +46,7 @@ module.exports = function (config) {
         '--disable-setuit-sandbox'
         ]
       }
-    }
+    },
     singleRun: false,
     restartOnFileChange: true
   });
