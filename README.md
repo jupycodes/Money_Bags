@@ -2,7 +2,7 @@
 [![Express | CI](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/express.js.yml/badge.svg)](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/express.js.yml)
 [![Discord](https://discordapp.com/api/guilds/937863219194789908/embed.png)](#)
 
-# Money_Bags
+# Money Bags
 
 This is a sample application being built as an excersice with students from the [RoboGarden Full Stack Development Bootcamp](https://bootcamps.robogarden.ca/bootcamp/full-stack)
 
