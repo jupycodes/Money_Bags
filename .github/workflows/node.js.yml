@@ -13,7 +13,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: Angular
+        working-directory: Money_Bags/Angular
     runs-on: ubuntu-latest
 
     strategy:
