@@ -2,7 +2,20 @@
 [![Express | CI](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/express.js.yml/badge.svg)](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/express.js.yml)
 # Money_Bags
 
-#First time vagrant setup
+## Testing with vagrant
+
+These steps assume you have completed the [First time vagrant setup](#first-time-vagrant-setup):
+
+1) Start he vm with `vagrant up`
+2) Make changes to the project
+3) Reload the vm with the new changes by running `vagrant reload --provision`
+4) Test in your browser
+5) While you are working on your project you can repeat steps 2-4
+6) If at anytime you screw something up you can refresh to the clean snapshot we created with `vagrant snapshot restore good`
+7) When you are all done run `vagrant halt` to turn off the VM and reclaim resources
+8) If you want to completley remove the VM from your system run `vagrant destroy`. (If you do this you will need to do the [First time vagrant setup](#first-time-vagrant-setup) again)
+
+## First time vagrant setup
 1) Download and install [vagrant](https://www.vagrantup.com/)
 2) Download and install [VirtualBox](https://www.virtualbox.org/)
 3) Clone this repo `git clone https://github.com/JordanRoboGarden/Money_Bags`
@@ -62,7 +75,7 @@ At this point everything should be working. You should be able to navigate on yo
 Angular   | https://localhost:8080
 Express   | https://localhost:3030
 ```
-##Useful vagrant commands
+### Useful vagrant commands
 | Command [required_arg] <--flags> | Effect                       |
 |----------------------------------|------------------------------|
 | vagrant up <--provision>         | starts the VM                |
