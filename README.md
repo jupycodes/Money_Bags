@@ -80,10 +80,10 @@ Express   | https://localhost:3030
 ### Useful vagrant commands
 | Command [required_arg] <--flags> | Effect                       |
 |----------------------------------|------------------------------|
-| vagrant up <--provision>         | starts the VM                |
-| vagrant halt                     | stops the VM                 |
-| vagrant reload <--provision>     | halt + up                    |
-| vagrant ssh                      | Start SSH session in VM      |
-| vagrant snapshot save [name]     | creates a new named snapshot |
-| vagrant snapshot restore [name]  | restores to a named snapshot |
-| vagrant snapshot delete [name]   | deletes a named snapshot     |
+| `vagrant up <--provision>`         | starts the VM                |
+| `vagrant halt`                     | stops the VM                 |
+| `vagrant reload <--provision>`     | halt + up                    |
+| `vagrant ssh`                      | Start SSH session in VM      |
+| `vagrant snapshot save [name]`     | creates a new named snapshot |
+| `vagrant snapshot restore [name]`  | restores to a named snapshot |
+| `vagrant snapshot delete [name]`   | deletes a named snapshot     |
