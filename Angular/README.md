@@ -1,3 +1,4 @@
+[![Angular | CI](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/angular.js.yml/badge.svg)](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/angular.js.yml)
 # MoneyBags
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
