@@ -1,0 +1,10 @@
+
+Portfolio Crypto / stocks
+	- Store info about your portfolio
+	- Support many named portfolios (Crypto, RBC, TD, et cetera)
+	- Each portfolio contains
+		- Purchases (symbol, units, buy_price, date)
+		- Sales (symbol, units, sell_price, date)
+		- Net earnings/losses
+		- Unrealized earnings/losses
+	- Offline and online version

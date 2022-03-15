@@ -1,0 +1,86 @@
+Things you should consider for a real project to make your life easier
+
+Considerations for Front and Back ends
+
+Hardware?
+	- Is this running in a container (docker) or VM (vmware/hyper-v) or Physical Server
+	- The hardware you are targeting will effect some design considerations
+		- You don't have access to system files with containers
+		- You will have heavily restricted system access on a shared VM
+		- You will have all the access on a physical server or dedicated VM however
+		  This is more work to maintain.
+	- Is this running in the 'cloud'(AWS/Azure)
+	- Will your backend be separate from your front end? (I recommend)
+
+Operating System?
+	- The operating system you system will run on in production is important
+		- Your app will probably run on some flavor of Linux. Learn Linux CLI
+		- Most things you do should be operating system independent but you want
+		  to test on your target OS early to prevent surprises when publishing to prod
+	- Linux is nice because
+		- Free, opensource
+		- Very fast
+		- Lightweight
+	- Sometimes windows is used to host because
+		- Your app needs to integrate with an existing Windows environment
+
+Web Server?
+	- The web server is what will be the interface between your application and the internet
+	- The web server you chose to run will effect performance, security, and maintainability
+	- Best to stick with well known servers
+		- For Windows you will use IIS (Internet Information Service)
+		- For Linux you will use apache2 or nginx
+		- Docker images usually use nginx
+
+Testing?
+	- Does your language have a good unit testing library?(Yes, yes it does! test early/often)
+
+
+=======================================================
+Considerations for back end
+
+Database?
+	- Does your app even need data persistence
+		- Some applications will use a backend for logic but store the users data in their browser
+	- How will data be stored?
+		- SQL?
+			- Which RDBMS will you use (Oracle SQL, MSSQL, MySQL, et cetera)
+		- NoSQL?
+
+Authentication?
+	- If your app needs authentication you should use an existing well known library for this
+		- Auth0 is a popular choice
+	- DO NOT WRITE AUTHENTICATION YOURSELF
+
+API Testing/interface?
+	- Giving your application an interface for the REST API will make testing easier
+		- Swagger is a popular choice
+
+Data ORM (Object–relational mapping)
+	- ORM's allow you to easily manage the database structure from your languages classes
+		- Sequilize is an example of an ORM
+
+REST API / Application Framework
+	- The application framework you choice is very important
+	- Your whole app is built on this framework and it is very hard to change later
+	- Express is an example of an application framework
+
+Integrate Data Models with REST API
+	- Most ORM/API combinations have a solution that will automatically
+	  create simple REST endpoints for every model
+
+
+=======================================================
+Considerations for Front End
+	- Can you start from a template? (You should if you can)
+	- Are you using a graphics library (material, bootstrap, et cetera)
+
+
+
+Considerations for project
+
+The less time you spend doing overhead tasks the better automate everything!
+	- During the early stage of your project you should keep notes on how to set everything up
+	- When stuff is more stable create some scripts
+	- You should setup an automatic Test and Deploy system some how
+		- CI/CD Piplines / Dev-ops

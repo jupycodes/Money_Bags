@@ -1,0 +1,40 @@
+all_ideas.txt
+
+#####NOPE#####
+Weather app
+Kanban scrum board
+Untapped 2.0 (beer)
+dating app
+dogwalking community share
+
+
+##idea
+Gym Workout app
+Video game companion
+Portfolio crypto / stocks
+Streaming service database
+
+
+####Maybe too much####
+Web 3.0 messenger app
+social media knockoff
+NTF Display
+
+Gym Workout app
+- Store info about your workout
+	- Date
+	- Time
+	- List of stretches (name, duration, reps)
+	- List of excesses (name, sets, reps, weight)
+	- Before/After workout fatigue
+
+
+Video game companion
+	- 
+
+
+Streaming service database
+	- Search for a show/movie in an auto-filtering list
+	- Selected show will display with list of where to Stream
+	- media(title, description, imdb_url(and other metadata sites),
+			platforms(name,region))

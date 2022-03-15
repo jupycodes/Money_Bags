@@ -1,0 +1,14 @@
+Is the app the business? or just a tool for your client?
+Public?/Private?
+
+Public
+------
+how many estimated users?
+existing users? 
+migrate data?
+scale?
+
+Private
+------
+"Cloud"
+On-Prem

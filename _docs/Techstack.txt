@@ -1,0 +1,56 @@
+Tech Stack?
+
+Vagrant
+
+Front
+==============================================
+Hardware
+--------
+DigitalOcean		| https://www.digitalocean.com/
+
+OS
+--
+Ubuntu 20			| 
+
+OS Dependencies
+---------------
+Web Server			| Apache 2			|
+Runtime				| NodeJS			| https://nodejs.org/en/
+
+
+IOS/Android/Desktop
+-------------------
+Ionic	| https://ionicframework.com/
+
+
+Web/Web Devices
+---------------
+Angler			| https://angular.io/
+ng-bootstrap	| https://ng-bootstrap.github.io/#/home
+
+
+
+Back
+==============================================
+Hardware
+--------
+DigitalOcean		| https://www.digitalocean.com/
+
+OS
+--
+Ubuntu 20			| 
+
+OS Dependencies
+---------------
+Web Server			| Apache 2			|
+Database Server		| MySql/MariaDB		|
+Runtime				| NodeJS			| https://nodejs.org/en/
+
+Application Dependencies
+------------------------
+Express				| https://expressjs.com/en/starter/generator.html
+Sequelize			| https://sequelize.org/
+Swagger				| https://www.npmjs.com/package/swagger-ui-express
+jest				| https://jestjs.io/docs/api
+finale-rest			| https://www.npmjs.com/package/finale-rest
+auth0				| https://auth0.com/docs/quickstart/webapp/express
