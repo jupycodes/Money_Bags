@@ -26,7 +26,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
-        working-directory: ./Angular
+        scope: ./Angular
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
