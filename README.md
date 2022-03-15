@@ -26,7 +26,7 @@ There are two files here that are used to configure vagrant:
 ```
 5) Open `bootstrap.sh` in your favourite text editor
 
-`bootstrap.sh` is a shell script that vagrant calls to provision the VM. I have seperated this file into 2 sections (INITIAL SETUP, WHILE TESTING). I have done this because the commands under `INITIAL SETUP` only need to be ran once when the VM is virst created and take forever to run (maybe around 30 minutes depending on hardware), while the `WHILE TESTING` section needs to run every time we change our code.
+`bootstrap.sh` is a shell script that vagrant calls to provision the VM. I have seperated this file into 2 sections (INITIAL SETUP, WHILE TESTING). I have done this because the commands under `INITIAL SETUP` only need to be ran once when the VM is first created and take forever to run (maybe around 30 minutes depending on hardware), while the `WHILE TESTING` section needs to run every time we change our code.
 This file looks like this:
 ```bash
 #!/usr/bin/env bash
