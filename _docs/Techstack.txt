@@ -54,3 +54,4 @@ Swagger				| https://www.npmjs.com/package/swagger-ui-express
 jest				| https://jestjs.io/docs/api
 finale-rest			| https://www.npmjs.com/package/finale-rest
 auth0				| https://auth0.com/docs/quickstart/webapp/express
+pm2
