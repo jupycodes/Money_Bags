@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+#=============================================================================
+#INITIAL SETUP
+#This will take a long time
+#Updates OS
+#Installs dependencies
+#Setup pm2
+#=============================================================================
+
 # apt-get update
 # apt-get upgrade -y
 # apt-get install -y build-essential
@@ -13,9 +21,14 @@
 # pm2 startup systemd
 
 #=============================================================================
-#UNCOMMENT_HERE
+#WHILE TESTING
+#Installs npm packages for Angular project
+#Builds Angular Project
+#Links apache2 web server directory to project directory
+#Installs npm packages for Express project
+#Starts Express project using pm2
+#=============================================================================
 
-#Building and displaying angular
 npm --prefix /vagrant/Angular install
 npm --prefix /vagrant/Angular build
 if ! [ -L /var/www/html ]; then
