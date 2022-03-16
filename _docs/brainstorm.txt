@@ -28,3 +28,35 @@ portfolio
             -units
             -sell_price
             -date
+
+- Portfolio
+    - id
+    - name
+    -
+
+- User
+    - ID
+    - firstName
+    - lastName
+    - email
+    - hash
+    - salt
+
+- Transaction_Type
+    - id
+    - type
+
+- Transaction
+    - Portfolio_ID: FK
+    - TYPE: (buy,sell)
+    - ASSET_TYPE: (CRYPTO, NFT, STOCK, CASH, PHYSICAL)
+    - SYMBOL:
+    - UNITS:
+    - VALUE:
+
+- Alert
+    - User_ID:
+    - SYMBOL:
+    - TYPE: (PriceRisedAbove, PriceDroppedBellow)
+    - TRIGGER:
+
