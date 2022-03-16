@@ -8,3 +8,4 @@ Portfolio Crypto / stocks
 		- Net earnings/losses
 		- Unrealized earnings/losses
 	- Offline and online version
+
