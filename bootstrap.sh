@@ -13,10 +13,10 @@
 # apt-get install -y build-essential
 # apt-get install -y apache2
 # apt-get install -y mysql-server
-
+#
 # curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 # apt-get install -y nodejs
-
+#
 # npm install pm2 -g
 # pm2 startup systemd
 
