@@ -30,7 +30,7 @@
 #=============================================================================
 
 npm --prefix /vagrant/Angular install
-npm --prefix /vagrant/Angular build
+npm --prefix /vagrant/Angular run build
 if ! [ -L /var/www/html ]; then
   rm -rf /var/www/html
   ln -fs /vagrant/Angular/dist/money-bags /var/www/html
