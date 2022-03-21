@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Id>b74c62cb-d415-426d-a3f0-c5bfa369ecab</Id>
+  <Name>Money Bags</Name>
+  <Url />
+  <QueryString />
+  <HttpProtocol>1.1</HttpProtocol>
+  <Timeout>30</Timeout>
+  <ProjectFileEncoding>utf-8</ProjectFileEncoding>
+  <Description />
+  <RequestEncoding>utf-8</RequestEncoding>
+  <AutomaticDecompression>true</AutomaticDecompression>
+  <DynamicParameters />
+  <Headers />
+  <UseAuthentication>false</UseAuthentication>
+  <AuthenticationData>
+    <AuthenticationCredentials />
+    <SpecifiedCredentials />
+  </AuthenticationData>
+  <AllowRedirect>true</AllowRedirect>
+  <KeepAlive>true</KeepAlive>
+  <EncodeUrl>true</EncodeUrl>
+  <EncodeForm>true</EncodeForm>
+  <ProjectItems>
+    <ProjectItem>
+      <Id>4bec6699-9caf-482f-88ce-ecbf85e3b2ab</Id>
+      <Name>Register</Name>
+      <Url>http://localhost:3000/api/users/register</Url>
+      <RequestBody>{
+  "user": {
+    "firstName": "testFirst",
+    "lastName": "testLast",
+    "email": "email@email.ca",
+    "password": "TestPassword"
+  }
+}</RequestBody>
+      <Method>POST</Method>
+      <ContentType>application/json</ContentType>
+      <ExecutionCount>1</ExecutionCount>
+      <UrlOption>absolute</UrlOption>
+      <AppendGlobalQueryString>false</AppendGlobalQueryString>
+      <CreateDate>637834589413927573</CreateDate>
+      <ChangeDate>637834590156473936</ChangeDate>
+      <ValidationRule />
+      <IncludeProjectAuthentication>true</IncludeProjectAuthentication>
+      <PercentEncodeParameters d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+      <IncludeReceivedCookies>false</IncludeReceivedCookies>
+      <IncludeProjectHeaders>true</IncludeProjectHeaders>
+      <ItemHeaders />
+      <BodySource>0</BodySource>
+      <AdditionalHeaders />
+      <ExecutionOrder>1</ExecutionOrder>
+      <IncludeWithCommandLine>true</IncludeWithCommandLine>
+      <IgnoreExecution>false</IgnoreExecution>
+      <IncludedCookies />
+      <UploadAsBase64>false</UploadAsBase64>
+      <Description />
+      <ValidationExecutionBehavior>0</ValidationExecutionBehavior>
+      <OperationId />
+      <RewriteCookieDomain>false</RewriteCookieDomain>
+      <BodyViewer>2</BodyViewer>
+      <ValidationType>0</ValidationType>
+      <PreActionPath />
+      <PreActionArguments />
+      <PreActionWorkingDirectory />
+      <PreActionCondition>0</PreActionCondition>
+      <PostActionPath />
+      <PostActionArguments />
+      <PostActionWorkingDirectory />
+      <PostActionCondition>0</PostActionCondition>
+      <ParameterOrder>0</ParameterOrder>
+      <ManualExecutionCount>false</ManualExecutionCount>
+    </ProjectItem>
+    <ProjectItem>
+      <Id>ac0481aa-3d4e-4fa2-9f31-f77aa4920a2f</Id>
+      <Name>Get Current User</Name>
+      <Url>http://localhost:3000/api/users/current</Url>
+      <RequestBody />
+      <Method>GET</Method>
+      <ContentType />
+      <ExecutionCount>1</ExecutionCount>
+      <UrlOption>absolute</UrlOption>
+      <AppendGlobalQueryString>false</AppendGlobalQueryString>
+      <CreateDate>637834592770280511</CreateDate>
+      <ChangeDate>637834592941343632</ChangeDate>
+      <ValidationRule />
+      <IncludeProjectAuthentication>true</IncludeProjectAuthentication>
+      <PercentEncodeParameters d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+      <IncludeReceivedCookies>false</IncludeReceivedCookies>
+      <IncludeProjectHeaders>true</IncludeProjectHeaders>
+      <BodySource d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+      <AdditionalHeaders>Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsQGVtYWlsLmNhIiwiaWQiOjIsImV4cCI6MTY1MzA2NzgxNywiaWF0IjoxNjQ3ODgzODE3fQ.dUGKInnhg8JoNhKbLAIKPzddXtob8778gIxXFtyGgBI</AdditionalHeaders>
+      <ExecutionOrder>2</ExecutionOrder>
+      <IncludeWithCommandLine>true</IncludeWithCommandLine>
+      <IgnoreExecution>false</IgnoreExecution>
+      <IncludedCookies />
+      <UploadAsBase64>false</UploadAsBase64>
+      <Description />
+      <ValidationExecutionBehavior>0</ValidationExecutionBehavior>
+      <OperationId />
+      <RewriteCookieDomain>false</RewriteCookieDomain>
+      <BodyViewer>0</BodyViewer>
+      <ValidationType>0</ValidationType>
+      <PreActionPath />
+      <PreActionArguments />
+      <PreActionWorkingDirectory />
+      <PreActionCondition>0</PreActionCondition>
+      <PostActionPath />
+      <PostActionArguments />
+      <PostActionWorkingDirectory />
+      <PostActionCondition>0</PostActionCondition>
+      <ParameterOrder>0</ParameterOrder>
+      <ManualExecutionCount>false</ManualExecutionCount>
+    </ProjectItem>
+    <ProjectItem>
+      <Id>02c8dc48-d7a1-4e3f-b11d-0426319d7de0</Id>
+      <Name>Login Good</Name>
+      <Url>http://localhost:3000/api/users/login</Url>
+      <RequestBody>{
+"user":{
+"email":"admin@domain.org",
+"password":"password"
+}
+}</RequestBody>
+      <Method>POST</Method>
+      <ContentType>application/json</ContentType>
+      <ExecutionCount>1</ExecutionCount>
+      <UrlOption>absolute</UrlOption>
+      <AppendGlobalQueryString>false</AppendGlobalQueryString>
+      <CreateDate>637834595399856017</CreateDate>
+      <ChangeDate>637834596173166337</ChangeDate>
+      <ValidationRule />
+      <IncludeProjectAuthentication>true</IncludeProjectAuthentication>
+      <PercentEncodeParameters d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+      <IncludeReceivedCookies>false</IncludeReceivedCookies>
+      <IncludeProjectHeaders>true</IncludeProjectHeaders>
+      <BodySource>0</BodySource>
+      <AdditionalHeaders />
+      <ExecutionOrder>3</ExecutionOrder>
+      <IncludeWithCommandLine>true</IncludeWithCommandLine>
+      <IgnoreExecution>false</IgnoreExecution>
+      <IncludedCookies />
+      <UploadAsBase64>false</UploadAsBase64>
+      <Description />
+      <ValidationExecutionBehavior>0</ValidationExecutionBehavior>
+      <OperationId />
+      <RewriteCookieDomain>false</RewriteCookieDomain>
+      <BodyViewer>2</BodyViewer>
+      <ValidationType>0</ValidationType>
+      <PreActionPath />
+      <PreActionArguments />
+      <PreActionWorkingDirectory />
+      <PreActionCondition>0</PreActionCondition>
+      <PostActionPath />
+      <PostActionArguments />
+      <PostActionWorkingDirectory />
+      <PostActionCondition>0</PostActionCondition>
+      <ParameterOrder>0</ParameterOrder>
+      <ManualExecutionCount>false</ManualExecutionCount>
+    </ProjectItem>
+    <ProjectItem>
+      <Id>a86d2a0f-e8af-4260-9867-c0b27d8c06c8</Id>
+      <Name>Login Bad</Name>
+      <Url>http://localhost:3000/api/users/login</Url>
+      <RequestBody>{
+"user":{
+"email":"wrong@email.test",
+"password":"password"
+}
+}</RequestBody>
+      <Method>POST</Method>
+      <ContentType>application/json</ContentType>
+      <ExecutionCount>1</ExecutionCount>
+      <UrlOption>absolute</UrlOption>
+      <AppendGlobalQueryString>false</AppendGlobalQueryString>
+      <CreateDate>637834596384207827</CreateDate>
+      <ChangeDate>637834596519909857</ChangeDate>
+      <ValidationRule />
+      <IncludeProjectAuthentication>true</IncludeProjectAuthentication>
+      <PercentEncodeParameters d4p1:nil="true" xmlns:d4p1="http://www.w3.org/2001/XMLSchema-instance" />
+      <IncludeReceivedCookies>false</IncludeReceivedCookies>
+      <IncludeProjectHeaders>true</IncludeProjectHeaders>
+      <BodySource>0</BodySource>
+      <AdditionalHeaders />
+      <ExecutionOrder>4</ExecutionOrder>
+      <IncludeWithCommandLine>true</IncludeWithCommandLine>
+      <IgnoreExecution>false</IgnoreExecution>
+      <IncludedCookies />
+      <UploadAsBase64>false</UploadAsBase64>
+      <Description />
+      <ValidationExecutionBehavior>0</ValidationExecutionBehavior>
+      <OperationId />
+      <RewriteCookieDomain>false</RewriteCookieDomain>
+      <BodyViewer>2</BodyViewer>
+      <ValidationType>0</ValidationType>
+      <PreActionPath />
+      <PreActionArguments />
+      <PreActionWorkingDirectory />
+      <PreActionCondition>0</PreActionCondition>
+      <PostActionPath />
+      <PostActionArguments />
+      <PostActionWorkingDirectory />
+      <PostActionCondition>0</PostActionCondition>
+      <ParameterOrder>0</ParameterOrder>
+      <ManualExecutionCount>false</ManualExecutionCount>
+    </ProjectItem>
+  </ProjectItems>
+  <CreateDate>637834586985498482</CreateDate>
+  <ChangeDate>637834596519927288</ChangeDate>
+  <Version>54</Version>
+  <MonitorData>true</MonitorData>
+  <Validations />
+  <ExecutionDelay>0</ExecutionDelay>
+  <FirstExecutionDelay>0</FirstExecutionDelay>
+  <Chainings />
+  <ExecutionGroups />
+  <GlobalUrlList />
+  <GlobalQueryStringList />
+  <AuthorizationDataEnabled>false</AuthorizationDataEnabled>
+  <AuthorizationUrl />
+  <AuthorizationRedirectUrl />
+  <AuthorizationClientId />
+  <AuthorizationClientSecret />
+  <AuthorizationExchangeUrl />
+  <AuthorizationPrompt>false</AuthorizationPrompt>
+  <SaveCompact>false</SaveCompact>
+</Project>

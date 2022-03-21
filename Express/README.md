@@ -4,6 +4,17 @@ to install
 npm install
 npm start
 
+
+
+#New setup
+npx sequelize db:create
+npx sequelize db:migrate
+npx sequelize db:seed:all
+
+npx sequelize-cli db:create --env "test"
+npx sequelize-cli db:migrate --env "test"
+npx cross-env NODE_ENV=test npx sequelize-cli db:seed:all
+
 #test
 
 
