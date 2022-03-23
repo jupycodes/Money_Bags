@@ -17,5 +17,4 @@ npx cross-env NODE_ENV=test npx sequelize-cli db:seed:all
 
 #test
 
-
 npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string ,hash:string ,salt:string ,updated_by:int
