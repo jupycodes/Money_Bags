@@ -1,1 +1,14 @@
-<p>login works!</p>
+<form [formGroup]="loginform" (ngSubmit)="login()">
+  <h2>Login</h2>
+
+  <label for="txt_email">Username</label>
+  <input id="txt_email" type="text" formControlName="email">
+
+  <label for="txt_password">City: </label>
+  <input id="txt_password" type="text" formControlName="password">
+
+  <button type="submit">Login</button>
+
+  {{this.loginform.get('email')?.value | json}}
+  {{this.loginform.get('password')?.value | json}}
+</form>

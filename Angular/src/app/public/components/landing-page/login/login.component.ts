@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthenticationService} from "../../../../shared/services/authentication.service";
+import {FormBuilder} from "@angular/forms";
+import {Router} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-login',
@@ -8,15 +11,24 @@ import {AuthenticationService} from "../../../../shared/services/authentication.
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public _authenticationService: AuthenticationService){ }
+  loginform = this._fb.group({
+    email:[''],
+    password:['']
+  });
 
-  email:string = '';
-  password:string = '';
+  constructor(
+    public _authenticationService: AuthenticationService,
+    private _fb: FormBuilder,
+    private _router: Router
+  ){ }
+
 
   ngOnInit(): void {
   }
 
   login(){
-    // this._authenticationService.loginUser(email,password)
+    console.log('test')
+    this._authenticationService.loginUser(this.loginform.get('email')?.value,this.loginform.get('password')?.value)
+    // this._router.navigate(['/main']);
   }
 }
