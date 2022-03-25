@@ -19,13 +19,7 @@ export class AuthenticationService {
       'http://localhost:3000/api/users/login',
       {user: {email: email, password: password}}).subscribe({
       next: response => {
-        this.currentUser = new UserModel(
-          response.id,
-          response.firstName,
-          response.lastName,
-          response.email,
-          response.token
-        )
+        this.currentUser = response as UserModel;
         console.log(this.currentUser)
         return this.currentUser;
       },
