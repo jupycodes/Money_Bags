@@ -1,4 +1,6 @@
-export class UserModel{
+import {IUserModel} from "./IUserModel";
+
+export class UserModel implements IUserModel{
   private _id: number
   private _firstName:string
   private _lastName:string

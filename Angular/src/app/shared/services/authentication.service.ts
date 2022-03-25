@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {UserModel} from '../models/userModel';
+import {Observable} from "rxjs";
+import {IUserModel} from "../models/IUserModel";
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +14,8 @@ export class AuthenticationService {
 
   currentUser: UserModel | undefined;
 
-  loginUser(email: string, password: string): boolean | null {
-    this._http.post<UserModel>(
+  loginUser(email: string, password: string): UserModel | null{
+    this._http.post<IUserModel>(
       'http://localhost:3000/api/users/login',
       {user: {email: email, password: password}}).subscribe({
       next: response => {
@@ -25,14 +27,13 @@ export class AuthenticationService {
           response.token
         )
         console.log(this.currentUser)
-        console.log(this.currentUser.email)
-        return true;
+        return this.currentUser;
       },
       error: error => {
-
+        return null;
       }
     });
-    return false;
+    return null;
   }
 
 
