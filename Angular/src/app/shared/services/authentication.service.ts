@@ -8,18 +8,18 @@ export class AuthenticationService {
 
   constructor(private _http: HttpClient) { }
 
-  currentUser: UserModel | undefined;
+  // currentUser: UserModel | undefined;
+  currentUser: Object | undefined;
 
-
-  loginUser(email:string, password:string): UserModel | null{
-    console.log(email);
-    console.log(password);
+  loginUser(email:string, password:string): boolean | null{
     this._http.post(
       'http://localhost:3000/api/users/login',
-      {"user":{"email":"wrong@email.test","password":"password"}}).subscribe(response => {
-        console.log(response)
+      {user:{email:email,password:password}}).subscribe(response => {
+        this.currentUser = response;
+        console.log(this.currentUser)
+      return true;
     });
-    return null;
+    return false;
   }
 
 

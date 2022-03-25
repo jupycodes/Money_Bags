@@ -37,6 +37,8 @@ module.exports = (sequelize, DataTypes) => {
     toAuthJSON(){
       return {
         id: this.id,
+        firstName: this.firstName,
+        lastName: this.lastName,
         email: this.email,
         token: this.generateJWT(),
       };

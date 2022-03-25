@@ -27,8 +27,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    console.log('test')
-    this._authenticationService.loginUser(this.loginform.get('email')?.value,this.loginform.get('password')?.value)
-    // this._router.navigate(['/main']);
+    if(this._authenticationService.loginUser(this.loginform.get('email')?.value,this.loginform.get('password')?.value)){
+      this._router.navigate(['/main']);
+    }else{
+      // TODO:
+    }
   }
 }
