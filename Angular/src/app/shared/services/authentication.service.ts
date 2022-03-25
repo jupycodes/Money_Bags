@@ -14,20 +14,27 @@ export class AuthenticationService {
 
   currentUser: UserModel | undefined;
 
+  /**
+   * Call login route from backend api
+   * return observer<user> if login was successful
+   * return error if login failed (still an observer but not important)
+   * @param email
+   * @param password
+   */
   public loginUser(email: string, password: string): Observable<UserModel>{
     return new Observable<UserModel>(subscriber => {
       this._http.post<IUserModel>(
         'http://localhost:3000/api/users/login',
-        {user: {email: email, password: password}}).subscribe({
-        next: response => {
-          this.currentUser = response as UserModel;
-          console.log(this.currentUser)
-          subscriber.next(this.currentUser)
+        {user: {email: email, password: password}}
+      ).subscribe({
+        next: user => {
+          this.currentUser = (user as UserModel);
+          subscriber.next(this.currentUser);
         },
-        error: error => {
+        error: error=>{
           subscriber.error(error)
         }
-      });
+      })
     })
   }
 

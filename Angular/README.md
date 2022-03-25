@@ -1,3 +1,15 @@
+
+
+# Challenge
+- Make default route /public
+- Make invalid routes show 404Component
+- Use environment variable in authentication.service.ts for API URL
+## Difficult
+- Protect /main route with AuthGuard 
+
+
+# Boilerplate readme
+
 [![Angular | CI](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/angular.js.yml/badge.svg?branch=main)](https://github.com/JordanRoboGarden/Money_Bags/actions/workflows/angular.js.yml)
 # MoneyBags
 

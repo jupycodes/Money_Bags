@@ -29,15 +29,16 @@ export class LoginComponent implements OnInit {
 
   login() {
     this._authenticationService.loginUser(
-      this.loginform.get('email')?.value, this.loginform.get('password')?.value)
+      this.loginform.get('email')?.value,
+      this.loginform.get('password')?.value)
       .subscribe({
-        next: user => {
-          console.log(`data: ${user}`);
-          this._router.navigate(['/main']);
+        next: user=>{
+          this._router.navigate(['/main'])
         },
         error: error => {
           throw error
         }
       });
   }
+
 }

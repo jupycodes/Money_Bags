@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  BackEndURL: 'api.money_bags.robogarden.ca'
 };
