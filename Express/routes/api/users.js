@@ -48,7 +48,7 @@ router.post('/register', auth.optional, (req, res, next) => {
         email:user.email,
       }).then(new_user=>{
         new_user.setPassword(user.password);
-        return new_user.save().then(() => res.json({ user: new_user.toAuthJSON() }));
+        return new_user.save().then(() => res.json(new_user.toAuthJSON()));
       }).catch(err=>{
         return res.status(500).send(err);
       });
@@ -85,7 +85,7 @@ router.post('/login', auth.optional, (req, res, next) => {
       const user = passportUser;
       user.token = passportUser.generateJWT();
 
-      return res.json({ user: user.toAuthJSON() });
+      return res.json(user.toAuthJSON() );
     }
     return res.status(400).send(info);
   })(req, res, next);
@@ -96,12 +96,12 @@ router.get('/current', auth.required, (req, res, next) => {
   const { payload: { id } } = req;
   console.log(id);
   return User.findByPk(id)
-      .then((user) => {
+      .then<User>((user) => {
         if(!user) {
           return res.sendStatus(400);
         }
 
-        return res.json({ user: user.toAuthJSON() });
+        return res.json(user.toAuthJSON());
       });
 });
 

@@ -1,4 +1,4 @@
-class UserModel{
+export class UserModel{
   private _id: number
   private _firstName:string
   private _lastName:string
@@ -13,6 +13,9 @@ class UserModel{
     this._token = token;
   }
 
+  get fullName(): string{
+    return `${this._firstName} ${this._lastName}`
+  }
 
   get id(): number {
     return this._id;
