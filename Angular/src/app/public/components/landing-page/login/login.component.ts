@@ -3,6 +3,7 @@ import {AuthenticationService} from "../../../../shared/services/authentication.
 import {FormBuilder} from "@angular/forms";
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
+import {UserModel} from "../../../../shared/models/userModel";
 
 @Component({
   selector: 'app-login',
@@ -26,11 +27,17 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
-    if(this._authenticationService.loginUser(this.loginform.get('email')?.value,this.loginform.get('password')?.value)){
-      this._router.navigate(['/main']);
-    }else{
-      // TODO:
-    }
+  login() {
+    this._authenticationService.loginUser(
+      this.loginform.get('email')?.value, this.loginform.get('password')?.value)
+      .subscribe({
+        next: user => {
+          console.log(`data: ${user}`);
+          this._router.navigate(['/main']);
+        },
+        error: error => {
+          throw error
+        }
+      });
   }
 }

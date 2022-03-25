@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {UserModel} from '../models/userModel';
-import {Observable} from "rxjs";
 import {IUserModel} from "../models/IUserModel";
+import {Observable, Subscription, throwError} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -14,21 +14,41 @@ export class AuthenticationService {
 
   currentUser: UserModel | undefined;
 
-  loginUser(email: string, password: string): UserModel | null{
-    this._http.post<IUserModel>(
-      'http://localhost:3000/api/users/login',
-      {user: {email: email, password: password}}).subscribe({
-      next: response => {
-        this.currentUser = response as UserModel;
-        console.log(this.currentUser)
-        return this.currentUser;
-      },
-      error: error => {
-        return null;
-      }
-    });
-    return null;
+  public loginUser(email: string, password: string): Observable<UserModel>{
+    return new Observable<UserModel>(subscriber => {
+      this._http.post<IUserModel>(
+        'http://localhost:3000/api/users/login',
+        {user: {email: email, password: password}}).subscribe({
+        next: response => {
+          this.currentUser = response as UserModel;
+          console.log(this.currentUser)
+          subscriber.next(this.currentUser)
+        },
+        error: error => {
+          subscriber.error(error)
+        }
+      });
+    })
   }
+
+
+
+
+
+// public async loginUser(email: string, password: string): Promise<Subscription>{
+  //     return this._http.post<IUserModel>(
+  //       'http://localhost:3000/api/users/login',
+  //       {user: {email: email, password: password}}).subscribe({
+  //       next: response => {
+  //         this.currentUser = response as UserModel;
+  //         console.log(this.currentUser)
+  //         return this.currentUser;
+  //       },
+  //       error: error => {
+  //         throw error;
+  //       }
+  //     });
+  // }
 
 
   registerUser(firstName: string, lastName: string, email: string, password: string): UserModel | null {
