@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {UserModel} from '../models/userModel';
 import {IUserModel} from "../models/IUserModel";
 import {Observable, Subscription, throwError} from "rxjs";
+import { environment } from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class AuthenticationService {
   public loginUser(email: string, password: string): Observable<UserModel>{
     return new Observable<UserModel>(subscriber => {
       this._http.post<IUserModel>(
-        'http://localhost:3000/api/users/login',
+        environment.BackEndURL,
         {user: {email: email, password: password}}
       ).subscribe({
         next: user => {
